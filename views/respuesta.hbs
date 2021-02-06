@@ -1,0 +1,31 @@
+<!-- CUERPO DEL EJERCICIO -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>Se ha enviado un email a su cuenta. Revíselo.</h3>
+      </div>
+      <div class="col-12">
+        <div class="card" style="width: 18rem;">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{cita.cName}} {{cita.cLastName}}</li>
+            <li class="list-group-item">{{cita.cEmail}} ({{cita.cPhone}})</li>
+            <li class="list-group-item">{{cita.cDate}} {{cita.cTime}}</li>
+          </ul>
+        </div>  
+      </div>      
+      <div class="col-12">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="col-12">
+        <script src="js/qrcode/build/qrcode.min.js"></script> 
+        <script>
+          QRCode.toCanvas(document.getElementById('canvas'), 'sample text', function (error) {
+            if (error) console.error(error)
+            console.log('success!');
+          })
+        </script> 
+      </div>
+    </div>
+  </div>
+</main>

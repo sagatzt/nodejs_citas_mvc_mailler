@@ -1,0 +1,19 @@
+
+<h1>Esto es la home</h1>
+<ul>
+    <li><a href="/quienes-somos">Quienes somos</a></li>
+    <li><a href="/donde-estmos">Donde estamos</a></li>
+    <li><a href="/contacto">Contacto</a></li>
+</ul>
+
+<script>
+    document.querySelector("#boton").onclick=()=>{
+    var request = new XMLHttpRequest()
+    request.onreadystatechange = ()=>{
+        if(request.readyState == 4 && request.status == 200) 
+            console.log(JSON.parse(request.responseText))
+    }
+    request.open('GET', '/consulta', true)
+    request.send()
+}
+</script>

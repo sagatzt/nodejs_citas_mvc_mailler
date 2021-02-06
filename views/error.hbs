@@ -1,0 +1,24 @@
+<!-- CUERPO DEL EJERCICIO -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        <div class="card" style="width: 18rem;">
+
+          <h1>Lo sentimos, la fecha {{fechaOcupada}} está ocupada. Elije otra</h1>
+          <a href="/">Volver a la reserva de citas</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.querySelector("#boton2").onclick=()=>{
+  doTask(10)
+  .then(result => console.log("Tiradas correctas: ", result.value))
+  .catch(err => console.error("Se ha sacado un ", err.message));
+}
+</script>
